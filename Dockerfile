@@ -1,7 +1,12 @@
 # based on Dockerfile from Mario David <mariojmdavid@gmail.com> (https://github.com/mariojmdavid/docker-gromacs-cuda/)
 
 FROM nvidia/cuda:10.1-devel
-MAINTAINER Mats Rynge <rynge@isi.edu>
+
+LABEL opensciencegrid.name="GROMACS GPU"
+LABEL opensciencegrid.description="A versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. This is a GPU enabled version."
+LABEL opensciencegrid.url="http://www.gromacs.org/"
+LABEL opensciencegrid.category="Tools"
+LABEL opensciencegrid.definition_url="https://github.com/opensciencegrid/osgvo-gromacs-gpu"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
